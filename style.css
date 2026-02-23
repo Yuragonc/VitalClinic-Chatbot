@@ -1,0 +1,63 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #e8f0f2;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.appointment-container {
+    background: white;
+    width: 420px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #2ca08e;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group { margin-bottom: 12px; }
+.form-row { display: flex; gap: 10px; }
+.half { flex: 1; }
+
+label { display: block; font-weight: 600; font-size: 13px; margin-bottom: 4px; }
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d9e0;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.btn-submit {
+    background-color: #2ca08e;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* ESTILOS DEL CHATBOT */
+#chatbot-container {
+    position: fixed; bottom: 20px; right: 20px;
+    width: 300px; height: 380px;
+    background: white; border-radius: 12px;
+    display: flex; flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+#chat-header { background: #2ca08e; color: white; padding: 12px; border-radius: 12px 12px 0 0; text-align: center; font-weight: bold; }
+#chat-body { flex: 1; padding: 15px; overflow-y: auto; font-size: 14px; background: #f9f9f9; }
+.bot-text { background: #dcf1ee; padding: 8px; border-radius: 8px; margin-bottom: 10px; }
+.user-text { background: #2ca08e; color: white; padding: 8px; border-radius: 8px; margin-bottom: 10px; text-align: right; margin-left: 20%; }
+#chat-footer { display: flex; padding: 10px; border-top: 1px solid #eee; }
+#chat-footer input { flex: 1; border: none; outline: none; }

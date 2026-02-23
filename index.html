@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitalClinic - Gestión Profesional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <section class="appointment-container">
+            <div class="logo-area">
+                <strong style="color: #2ca08e; font-size: 20px;">VitalClinic</strong>
+            </div>
+            
+            <h1>Crear Cita</h1>
+
+            <form id="form-cita">
+                <div class="form-group">
+                    <label>Nombre del Paciente:</label>
+                    <input type="text" id="nombre-paciente" placeholder="Juan Pérez" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label>Tipo de Documento:</label>
+                        <select id="tipo-doc">
+                            <option value="CC">CC</option>
+                            <option value="TI">TI</option>
+                        </select>
+                    </div>
+                    <div class="form-group half">
+                        <label>Número:</label>
+                        <input type="number" id="num-doc" placeholder="123456" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label>Fecha:</label>
+                        <input type="date" id="fecha-cita" required>
+                    </div>
+                    <div class="form-group half">
+                        <label>Hora:</label>
+                        <input type="time" id="hora-cita" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Especialidad:</label>
+                    <select id="especialidad">
+                        <option value="Cardiología">Cardiología</option>
+                        <option value="Medicina General">Medicina General</option>
+                        <option value="Pediatría">Pediatría</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Nombre del Médico:</label>
+                    <input type="text" id="nombre-medico" placeholder="Dr. Andrés Sánchez" required>
+                </div>
+
+                <button type="submit" class="btn-submit">Crear Cita</button>
+            </form>
+        </section>
+    </div>
+
+    <div id="chatbot-container">
+        <div id="chat-header">Soporte VitalClinic</div>
+        <div id="chat-body">
+            <p class="bot-text">Bienvenido a <b>VitalClinic</b>. ¿Tienes dudas sobre cómo llenar el formulario?</p>
+        </div>
+        <div id="chat-footer">
+            <input type="text" id="user-input" placeholder="Escribe aquí...">
+            <button onclick="enviarMensaje()">➤</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
