@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitalClinic | Gestión de Citas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">VitalClinic</div>
+        <ul class="nav-links">
+            <li>Inicio</li>
+            <li>Pacientes</li>
+            <li>Agenda</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="appointment-card">
+            <h2>📅 Agendar Nueva Cita</h2>
+            <p>Complete los datos para programar la atención médica.</p>
+            <form id="form-cita">
+                <div class="form-group">
+                    <label>Nombre del Paciente</label>
+                    <input type="text" id="nombre-paciente" placeholder="Ej: Juan Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Especialidad Médica</label>
+                    <select id="especialidad">
+                        <option value="Medicina General">Medicina General</option>
+                        <option value="Pediatría">Pediatría</option>
+                        <option value="Odontología">Odontología</option>
+                        <option value="Cardiología">Cardiología</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Fecha de la Cita</label>
+                    <input type="date" id="fecha-cita" required>
+                </div>
+
+                <button type="submit" class="btn-confirmar">Confirmar Cita</button>
+            </form>
+        </section>
+
+        <section class="list-card">
+            <h3>Citas Programadas</h3>
+            <div id="contenedor-citas">
+                <p class="empty-msg">No hay citas registradas para hoy.</p>
+            </div>
+        </section>
+    </div>
+
+    <div id="chatbot-container">
+        <div id="chat-header">Asistente VitalClinic</div>
+        <div id="chat-body">
+            <p class="bot-text">Bienvenido a <b>VitalClinic</b>. ¿En qué puedo ayudarte hoy?</p>
+        </div>
+        <div id="chat-footer">
+            <input type="text" id="user-input" placeholder="Pregunta algo...">
+            <button onclick="enviarMensaje()">➤</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
